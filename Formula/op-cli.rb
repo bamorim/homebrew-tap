@@ -13,5 +13,9 @@ class OpCli < Formula
   def install
     bin.install "op"
   end
+
+  def test
+    assert_equal "2.4.0", shell_output("#{bin}/op -v")
+  end
 end
 
